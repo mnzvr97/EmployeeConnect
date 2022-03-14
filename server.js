@@ -25,7 +25,7 @@ app.use('/img', express.static(path.resolve(__dirname, "assets")))
 app.use('/js', express.static(path.resolve(__dirname, "assets")))
 
 app.get('/', (req, res)=>{
-    res.send("Employee Control");
+    res.render('index');
 })
 
 app.listen(3000, ()=> {console.log('Server is running on http://localhost:${PORT}')});

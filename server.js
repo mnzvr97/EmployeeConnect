@@ -3,7 +3,8 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const path = require('path');
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
+const connectDB = require('./server/database/connection')
 
 const app = express ();
 
@@ -12,6 +13,9 @@ const PORT = process.env.PORT || 8080
 
 // log requests
 app.use(morgan('tiny'));
+
+// mongo connect
+connectDB();
 
 //parse requests for body
 app.use(bodyparser.urlencoded({ extended : true }))
@@ -28,11 +32,11 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 //loading router
 app.use('/', require('./server/routes/router'))
 
-app.listen(3000, ()=> {console.log('Server is running on http://localhost:3000')});
+app.listen(3000, ()=> {console.log('Server is running on http://localhost:${PORT}')});
 
-mongoose.connect("mongodb://localhost:27017/employeeControl", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}, () => {
-    console.log("mongodb connected successfully!");
-});
+// mongoose.connect("mongodb://localhost:27017/employeeControl", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// }, () => {
+//     console.log("mongodb connected successfully!");
+// });

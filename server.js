@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const path = require('path');
+const mongoose = require('mongoose')
 
 const app = express ();
 
@@ -29,3 +30,9 @@ app.use('/', require('./server/routes/router'))
 
 app.listen(3000, ()=> {console.log('Server is running on http://localhost:3000')});
 
+mongoose.connect("mongodb://localhost:27017/employeeControl", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}, () => {
+    console.log("mongodb connected successfully!");
+});

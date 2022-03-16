@@ -4,6 +4,30 @@ var Userdb = require('../model/model')
 // create & save user
 
 exports.create = (req,res)=>{
+    if (!req.body){
+        res.status(400).send({message : "Content can not be empty!"})
+        return;
+    }
+    // new user
+    const user = new Userdb({
+        name : req.body.name,
+        employeeid : req.body.employeeid,
+        salary : req.body.salary,
+        email : req.body.email,
+        gender : req.body.status,
+        status : req.body.status
+    })
+    // saving user
+    user
+    .save(user)
+    .then(data => {
+        res.send(data)
+    })
+    .catch(err => {
+        res.status(500).send({
+            message : err.message || "Some error occured while establishing a create operation"
+        });
+    });
 
 }
 

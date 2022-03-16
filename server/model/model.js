@@ -20,8 +20,14 @@ var schema = new mongoose.Schema({
         required : true,
         unique : true
     },
-    gender : String,
-    status : String
+    gender : {
+        type : String,
+    },
+    status : {
+        type : String,
+    }    
+    // gender : String,
+    // status : String
 })
 
 const Userdb = mongoose.model('userdb', schema);

@@ -1,7 +1,10 @@
 
 
 $("#add_user").submit(function(event){
-    alert("Data Submitted!");
+    Swal.fire('Data uploaded successfully!');
+    setTimeout(function(){
+       location.reload(1);
+     }, 4000);
 })
 
 $("#update_user").submit(function(event){
@@ -23,7 +26,7 @@ $("#update_user").submit(function(event){
     }
 
     $.ajax(request).done(function(response){
-        alert("Data Updated Successfully!");
+        Swal.fire('Data updated successfully!');
     })
 
 })
@@ -40,8 +43,10 @@ if(window.location.pathname == "/"){
 
         if(confirm("Do you confirm deletion?")){
             $.ajax(request).done(function(response){
-                alert("Data Deleted Successfully!");
-                location.reload()
+                Swal.fire('Data deleted successfully!');
+                setTimeout(function(){
+                    window.location.reload(1);
+                 }, 2000);
             })
         }
     })

@@ -7,17 +7,14 @@ var schema = new mongoose.Schema({
     },
     employeeid : {
         type : String,
-        required : true,
         unique : true
     },
     salary : {
         type : String,
-        required : true,
         unique : true
     },
     email : {
         type : String,
-        required : true,
         unique : true
     },
     gender : {

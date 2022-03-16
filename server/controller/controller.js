@@ -1,3 +1,4 @@
+const { restart } = require('nodemon');
 var Userdb = require('../model/model')
 
 // creation of api request
@@ -33,15 +34,32 @@ exports.create = (req,res)=>{
 
 // return a user
 exports.find = (req,res)=>{
-    Userdb.find()
-    .then(user => {
-        res.send(user)
-    })
-    .catch(err => {
-        res.status(500).send({
-            message : err.message || "Some error occured while retrieving information"
+
+    if(req.query.id){
+        const id = req.query.id;
+
+        Userdb.findById(id)
+            .then(data =>{
+                if(!data){
+                    res.status(404).send({message : "Cannot find user with id"+ id})
+                }else{
+                    res.send(data)
+                }
+            })
+            .catch(err =>{
+                restart.status(500).send({message: "Error retrieving user with id" + id})
+            })
+    }else{
+        Userdb.find()
+        .then(user => {
+            res.send(user)
         })
-    })
+        .catch(err => {
+            res.status(500).send({
+                message : err.message || "Some error occured while retrieving information"
+            })
+        })
+    }
 }
 
 // update a new user by id

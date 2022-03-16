@@ -14,7 +14,7 @@ exports.create = (req,res)=>{
         employeeid : req.body.employeeid,
         salary : req.body.salary,
         email : req.body.email,
-        gender : req.body.status,
+        gender : req.body.gender,
         status : req.body.status
     })
     // saving user

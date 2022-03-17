@@ -1,13 +1,14 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
 
 const connectDB = async () => {
     try{
-      const con =  mongoose.connect('mongodb+srv://mnzvr:mnzvr1997@cluster0.ebkpj.mongodb.net/employeecontrol?retryWrites=true&w=majority', {
+       mongoose.connect(process.env.MONG_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         })
 
-        console.log('MongoDB connected : ${con.connection.host}');
+        console.log(`MongoDB connected : ${mongoose.connection}`);
     }catch(err){
         console.log(err);
         process.exit(1);

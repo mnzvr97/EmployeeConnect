@@ -32,11 +32,5 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 //loading router
 app.use('/', require('./server/routes/router'))
 
-app.listen(3000, ()=> {console.log(`Server is running on http://localhost:${PORT}`)});
+app.listen(PORT, ()=> {console.log(`Server is running on http://localhost:${PORT}`)});
 
-// mongoose.connect("mongodb://localhost:27017/employeeControl", {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// }, () => {
-//     console.log("mongodb connected successfully!");
-// });

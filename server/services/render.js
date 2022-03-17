@@ -3,7 +3,7 @@ const { response } = require('express');
 
 exports.homeRoutes = (req, res) => {
 
-    axios.get('http://localhost:3000/api/users')
+    axios.get('/api/users')
         .then(function(response){
             res.render('index', {users : response.data});
         })
@@ -17,7 +17,7 @@ exports.add_user = (req, res) => {
 }
 
 exports.update_user = (req, res) => {
-    axios.get('http://localhost:3000/api/users', { params : { id : req.query.id}})
+    axios.get('/api/users', { params : { id : req.query.id}})
         .then(function(userdata){
             console.log(userdata.data)
             res.render("update_user", {user : userdata.data})

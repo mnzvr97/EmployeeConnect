@@ -8,7 +8,7 @@ const connectDB = require('./server/database/connection')
 
 const app = express ();
 
-dotenv.config({path:'config.env'})
+dotenv.config()
 const PORT = process.env.PORT || 3000
 
 // log requests
@@ -32,7 +32,7 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 //loading router
 app.use('/', require('./server/routes/router'))
 
-app.listen(3000, ()=> {console.log('Server is running on http://localhost:${PORT}')});
+app.listen(3000, ()=> {console.log(`Server is running on http://localhost:${PORT}`)});
 
 // mongoose.connect("mongodb://localhost:27017/employeeControl", {
 //   useNewUrlParser: true,

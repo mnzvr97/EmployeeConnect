@@ -20,7 +20,7 @@ $("#update_user").submit(function(event){
     console.log(data);
 
     var request = {
-        "url" : `http://localhost:3000/api/users/${data.id}`,
+        "url" : `/api/users/${data.id}`,
         "method" : "PUT",
         "data" : data
     }

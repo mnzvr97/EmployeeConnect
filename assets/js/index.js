@@ -19,7 +19,8 @@ $("#update_user").submit(function(event){
 
     console.log(data);
 
-    var request = {
+    var request = { 
+        "baseUrl" : 'https://fast-sea-48182.herokuapp.com', 
         "url" : `/api/users/${data.id}`,
         "method" : "PUT",
         "data" : data
@@ -37,6 +38,7 @@ if(window.location.pathname == "/"){
         var id = $(this).attr("data-id")
 
         var request = {
+            "baseUrl" : 'https://fast-sea-48182.herokuapp.com', 
             "url" : `/api/users/${id}`,
             "method" : "DELETE"
         } 

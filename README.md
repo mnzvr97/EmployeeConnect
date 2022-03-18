@@ -1,33 +1,46 @@
-# EmployeeControl
+# EmployeeConnect
 
-## Canada’s Hangman is a JS based game developed by Mohammad Ali Khan. Hangman is essentially a game played by everyone at some point in their lives either in their childhood or in class. The main purpose is to guess a word that is related to the topic.
+EmployeeConnect is an Management System application that assists organizations in overseeing it's employees. It is an administration tool that uses various web technologies to process data efficiently.
+
+### Link: 
+______________________________________________________________
+
+Please click the following link to visit the website: [Employee Connect](https://fast-sea-48182.herokuapp.com/).
+
+### Technology
+______________________________________________________________
+List of the technologies used: 
+
+     - Javascript
+     - CSS 
+     - Node
+     - Express
+     - MongoDB
 
 
-# **Instructions**
-     
-## The player must type in a letter from their keyboard to start the game. The current category is set on “Cities of Canada”. Once a letter is typed in, either the game defines it as correct and gives it a position, or if it’s incorrect, the game will notify the player and will initiate the hanging.
+### Functionality:
+______________________________________________________________
+The data that is presented is:
+     -Name
+     -Employee ID
+     -Salary
+     -Email
+     -Gender
+     -Status
+
+The user may also edit or delete the relevent data.
 
 
-# **Getting Started**
-
-## Play the game using the following link: [Canada's Hangman Game](https://mnzvr97.github.io/First-Project/)
-## Hope you enjoy the game!
+### Screenshots:
+______________________________________________________________
 
 
-# **Technologies**
-
-## This game was developed in VS Code using HTML, JavaScript & CSS.
 
 
-# **Screenshots**
- 
-![Hangman Screenshot](Hangmanss.PNG)
 
-# **Future Steps**
-##   In the following weeks, I intend to add additional features such as; 
-###   1.	Score board
-###   2.	Multiple players
-###   3.	Improved graphics 
-###   4.	Additional categories
-####        a.	Countries
-####        b.	Provinces
+## Future Steps:
+______________________________________________________________
+     -Create User/ Login in functionality.
+     -Search tool.
+     -Sort Tool
+

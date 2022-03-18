@@ -11,22 +11,23 @@ Please click the following link to visit the website: [Employee Connect](https:/
 ______________________________________________________________
 List of the technologies used: 
 
-     * Javascript
-     * CSS 
-     * Node
-     * Express
-     * MongoDB
+     1. Javascript
+     2. CSS 
+     3. Node
+     4. Express
+     5. MongoDB
 
 
 ### Functionality:
 ______________________________________________________________
 The data that is presented is:
-     * Name
-     * Employee ID
-     * Salary
-     * Email
-     * Gender
-     * Status
+
+     1. Name
+     2. Employee ID
+     3. Salary
+     4. Email
+     5. Gender
+     6. Status
 
 The user may also edit or delete the relevent data.
 
@@ -46,7 +47,7 @@ ______________________________________________________________
 
 ## Future Steps:
 ______________________________________________________________
-     * Create User/ Login in functionality.
-     * Search tool.
-     * Sort Tool
+     1. Create User/ Login in functionality.
+     2. Search tool.
+     3. Sort Tool
 
